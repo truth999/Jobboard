@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { JobItem } from '../JobItem/index';
+import { Container } from './style';
 
 export const JobList = () => {
   const [jobInfo, setJobInfo] = useState({
@@ -15,8 +16,8 @@ export const JobList = () => {
   });
 
   return (
-    <>
+    <Container>
       <JobItem {...jobInfo} />
-    </>
+    </Container>
   );
 };

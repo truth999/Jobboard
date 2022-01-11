@@ -10,6 +10,10 @@ export const Container = styled.div`
   border-bottom: 1px #b9a4a4 solid;
 `;
 
+export const HeaderRow = styled.div`
+  padding-bottom: 150px;
+`;
+
 export const Logo = styled.img`
   width: 150px;
   cursor: pointer;

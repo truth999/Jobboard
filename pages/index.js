@@ -10,7 +10,6 @@ export default function Home() {
         <meta name="techChallenge" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-
       <Layout />
     </>
   );
