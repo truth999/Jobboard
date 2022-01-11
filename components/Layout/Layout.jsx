@@ -1,12 +1,11 @@
-import { Header } from '../Header/index'
-import { Home } from '../Home/index'
+import { Header } from '../Header/index';
+import { Home } from '../Home/index';
 
-export const Layout =()=>{
+export const Layout = () => {
   return (
     <>
-     <Header/>
-    <Home />
+      <Header />
+      <Home />
     </>
-   
-  )
-}
+  );
+};
