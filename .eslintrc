@@ -1,0 +1,74 @@
+{
+  "root": true,
+  "env": {
+    "node": true,
+    "jest": true
+  },
+  "extends": [
+    "airbnb-base",
+    "plugin:@typescript-eslint/recommended",
+    "plugin:prettier/recommended"
+  ],
+  "plugins": ["graphql", "@typescript-eslint", "unused-imports", "simple-import-sort"],
+  // add your custom rules here
+  "rules": {
+    // note you must disable the base rule as it can report incorrect errors
+    "no-shadow": "off",
+    "@typescript-eslint/no-shadow": ["error"],
+
+    "no-void": "off",
+    "no-plusplus": "off",
+    "no-useless-constructor": "off",
+    "arrow-body-style": "off",
+    "prefer-arrow-callback": "off",
+    "import/no-extraneous-dependencies": ["error", { "devDependencies": true }],
+
+    // https://stackoverflow.com/a/64024916
+    // note you must disable the base rule as it can report incorrect errors
+    "no-use-before-define": "off",
+    "no-new": "off",
+
+    "@typescript-eslint/no-use-before-define": "off",
+    "@typescript-eslint/camelcase": 0,
+    "prettier/prettier": [
+      "error",
+      {
+        "singleQuote": true,
+        "trailingComma": "es5",
+        "printWidth": 100
+      }
+    ],
+    "import/extensions": 0,
+    "no-console": 0,
+    "import/prefer-default-export": 0,
+    "import/no-dynamic-require": 0,
+    "import/no-unresolved": 0,
+
+    // eslint --fix will remove the imports
+    "unused-imports/no-unused-imports-ts": "warn",
+    "simple-import-sort/imports": "warn",
+
+    "no-underscore-dangle": 0,
+    "no-param-reassign": 0,
+    "react/prop-types": 0,
+    "class-methods-use-this": 0,
+    "@typescript-eslint/no-explicit-any": 0,
+    "@typescript-eslint/explicit-module-boundary-types": 0
+  },
+  "settings": {
+    "import/core-modules": [ "path"],
+    "import/resolver": {
+      "node": {
+        "extensions": [
+          ".js",
+          ".jsx",
+          ".ts",
+          ".tsx"
+        ]
+      }
+    },
+    "react": {
+      "version": "detect"
+    }
+  }
+}
