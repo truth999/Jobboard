@@ -1,10 +1,16 @@
-import React from 'react'
-
-export const Home =()=>{
-
+import React from 'react';
+import { JobList } from './JobList/index';
+export const Home = () => {
   return (
-    <div>
-      Hello There
-    </div>
-  )
-}
+    <>
+      <JobList />
+      <JobList />
+      <JobList />
+      <JobList />
+      <JobList />
+      <JobList />
+
+      <JobList />
+    </>
+  );
+};
