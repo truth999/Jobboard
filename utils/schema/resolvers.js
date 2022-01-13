@@ -6,7 +6,7 @@ const resolvers = {
       return users;
     },
     getAllJobs() {
-      return jobs;
+      return jobList;
     },
   },
   Mutation: {
