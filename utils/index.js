@@ -14,5 +14,5 @@ await server.start();
 server.applyMiddleware({ app });
 
 app.listen({ port: 4000 }, () => {
-  console.info('Server Running on port 4000');
+  console.info('Server Running on port 4000, get gql stuio : http://localhost:4000/graphql');
 });
