@@ -1,9 +1,24 @@
-import users from '../fakeData.js';
+import { users, jobList } from '../fakeData.js';
 
 const resolvers = {
   Query: {
     getAllUsers() {
       return users;
+    },
+    getAllJobs() {
+      return jobs;
+    },
+  },
+  Mutation: {
+    createUser(_parent, args) {
+      const newUser = args;
+      users.push(newUser);
+      return newUser;
+    },
+    createJob(_parent, args) {
+      const newJob = args;
+      jobList.push(newJob);
+      return newJob;
     },
   },
 };
