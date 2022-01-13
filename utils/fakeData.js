@@ -46,11 +46,11 @@ export const jobList = [
   {
     id: 4,
     coverImage:
-      'https://cdn-images.welcometothejungle.com/GVaTiFy8tv9VIc4MwuUqSTcfo5uuVTkmCupA2uHgkrA/w:640/q:85/czM6Ly93dHRqLXBy/b2R1Y3Rpb24vdXBs/b2Fkcy93ZWJzaXRl/X29yZ2FuaXphdGlv/bi9jb3Zlcl9pbWFn/ZS93dHRqX2ZyL2Zy/LTBjYTgyMGY3LTE5/MWMtNGM1OC05Zjdi/LTliMzc0YjJhMTBl/Ny5qcGc',
+      'https://cdn-images.welcometothejungle.com/UTdRAeBb63sFnQs8f_HJP7kgqG0cVTbTGXjRdCjRimY/rs:auto:2000::/q:85/czM6Ly93dHRqLXByb2R1Y3Rpb24vdXBsb2Fkcy93ZWJzaXRlX29yZ2FuaXphdGlvbi9jb3Zlcl9pbWFnZS93dHRqX2ZyL2ZyLTBjYTgyMGY3LTE5MWMtNGM1OC05ZjdiLTliMzc0YjJhMTBlNy5qcGc',
     companyLogo:
       'https://cdn-images.welcometothejungle.com/pnR7qn82lPxAk6oX-nHmtvlcSCCFHFWbNNcpBCGEmaI/w:200/q:85/czM6Ly93dHRqLXBy/b2R1Y3Rpb24vdXBs/b2Fkcy9vcmdhbml6/YXRpb24vbG9nby82/MTE3LzE1MTMxNS8w/MTFkNzA0ZC0yYjkx/LTQ4NDEtYTlhOC04/NTI3NjY1YzJkMDQu/cG5n',
     companyName: 'Sewan',
-    title: 'ProductOwner',
+    title: 'Scrum Master',
     contractType: 'CDI',
     localization: 'Paris',
     publishedAt: '',
