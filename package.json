@@ -1,7 +1,16 @@
 {
   "name": "jobboard",
   "private": true,
-  "type": "module",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "Guillaume",
+  "license": "ISC",
+  "homepage": "https://github.com/SirHarveyBix/Jobboard#readme",
+  "description": "This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SirHarveyBix/Jobboard.git"
+  },
   "scripts": {
     "nodemon": "nodemon utils/index.js",
     "dev": "next dev",
