@@ -1,11 +1,3 @@
-export const users = [
-  { name: 'Guillaume', age: 33, job: 'Web Developper' },
-  { name: 'Sarah', age: 31, job: 'Web Developper' },
-  { name: 'Richard', age: 29, job: 'Rider' },
-  { name: 'Sylvestre', age: 59, job: 'Web Retired' },
-  { name: 'tristan', age: 30, job: 'Homeless as far as we know' },
-];
-
 export const jobList = [
   {
     id: 1,

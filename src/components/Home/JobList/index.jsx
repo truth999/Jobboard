@@ -6,7 +6,7 @@ export const JobList = (props) => {
 
   return (
     <Container>
-      {!allJobs ? 'Loading' : allJobs[0]?.map((item) => <JobItem key={item.id} {...item} />)}
+      {!allJobs ? 'Loading' : allJobs?.map((item) => <JobItem key={item.id} {...item} />)}
     </Container>
   );
 };

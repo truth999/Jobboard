@@ -1,10 +1,15 @@
 import Head from 'next/head';
 import { Header } from '../src/components/Header';
-import { allJobs } from '../src/lib/graphql/queries';
+import { ALL_JOBS } from '../src/lib/graphql/queries';
 import { JobList } from '../src/components/Home/JobList';
+import { useQuery } from '@apollo/client';
 
 export default function Home(props) {
-  const { allJobs } = props;
+  const { loading, error, data } = useQuery(ALL_JOBS);
+
+  if (loading) return <>Wait a Sec.</>;
+  if (error) return <>`Wait : ${error}.`</>;
+
   return (
     <>
       <Head>
@@ -14,7 +19,7 @@ export default function Home(props) {
       </Head>
 
       <Header />
-      <JobList allJobs={allJobs} />
+      <JobList allJobs={data?.getAllJobs} />
     </>
   );
 }
@@ -22,7 +27,7 @@ export default function Home(props) {
 export async function getStaticProps() {
   return {
     props: {
-      allJobs: allJobs,
+      // allJobs: allJobs,
     },
   };
 }
