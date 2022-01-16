@@ -1,11 +1,15 @@
 import Head from 'next/head';
-import { Header } from '../components/Header';
-import { gql } from '@apollo/client';
-import { JobItem } from '../components/Home/JobItem';
-import { client } from './api/apollo';
+import { Header } from '../src/components/Header';
+import { ALL_JOBS } from '../src/lib/graphql/queries';
+import { JobList } from '../src/components/Home/JobList';
+import { useQuery } from '@apollo/client';
 
 export default function Home(props) {
-  const { allJobs } = props;
+  const { loading, error, data } = useQuery(ALL_JOBS);
+
+  if (loading) return <>Wait a Sec.</>;
+  if (error) return <>`Wait : ${error}.`</>;
+
   return (
     <>
       <Head>
@@ -15,41 +19,15 @@ export default function Home(props) {
       </Head>
 
       <Header />
-      <div>
-        {!allJobs ? 'Loading' : allJobs[0]?.map((item) => <JobItem key={item.id} {...item} />)}
-      </div>
+      <JobList allJobs={data?.getAllJobs} />
     </>
   );
 }
 
 export async function getStaticProps() {
-  const allJobs = [];
-  client
-    .query({
-      query: gql`
-        query GetAllJobs {
-          getAllJobs {
-            id
-            coverImage
-            companyLogo
-            companyName
-            title
-            contractType
-            localization
-            publishedAt
-          }
-        }
-      `,
-    })
-    .then((response) => {
-      const result = response.data.getAllJobs;
-      allJobs.push(result);
-      return allJobs;
-    });
-
   return {
     props: {
-      allJobs: allJobs,
+      // allJobs: allJobs,
     },
   };
 }

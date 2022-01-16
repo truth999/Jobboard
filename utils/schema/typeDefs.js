@@ -1,50 +1,34 @@
 import { gql } from 'apollo-server-express';
 
 const typeDefs = gql`
-  type User {
-    name: String!
-    age: Int!
-    job: String!
-  }
   type Job {
-    id: ID!
-    coverImage: String!
-    companyLogo: String!
-    companyName: String!
-    title: String!
-    contractType: String!
-    localization: String!
-    publishedAt: String!
+    id: ID
+    publishedAt: String
+    coverImage: String
+    companyLogo: String
+    companyName: String
+    title: String
+    contractType: String
+    localization: String
   }
   # Inputs :
-  input CreatJobInput {
-    id: ID!
-    coverImage: String!
-    companyLogo: String!
-    companyName: String!
-    title: String!
-    contractType: String!
-    localization: String!
-    publishedAt: String!
+  input CreateJobInput {
+    id: ID
+    coverImage: String
+    companyLogo: String
+    companyName: String
+    title: String
+    contractType: String
+    localization: String
+    publishedAt: String
   }
   # Query :
   type Query {
-    getAllUsers: [User!]!
     getAllJobs: [Job!]!
   }
   # Mutations :
   type Mutation {
-    createUser(name: String!, age: Int!, job: String!): User!
-    createJob(
-      id: ID!
-      coverImage: String!
-      companyLogo: String!
-      companyName: String!
-      title: String!
-      contractType: String!
-      localization: String!
-      publishedAt: String!
-    ): Job!
+    createJob(data: CreateJobInput): Job
   }
 `;
 export default typeDefs;
