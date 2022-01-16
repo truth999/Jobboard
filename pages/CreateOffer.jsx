@@ -1,6 +1,6 @@
 /* eslint-disable react/no-unescaped-entities */
 import React, { useState } from 'react';
-import { Header } from '../components/Header/index';
+import { Header } from '../src/components/Header/index';
 import { FormContainer, InputButton, Container, Label, Input } from '../styles/CreateOfferPage';
 
 const CreateOfferPage = () => {
