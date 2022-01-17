@@ -9,7 +9,7 @@ export const jobList = [
     title: ' Product Owner',
     contractType: 'CDI',
     localization: 'Paris',
-    publishedAt: '',
+    publishedAt: '16 Dec. 2021',
   },
   {
     id: 2,
@@ -21,7 +21,7 @@ export const jobList = [
     title: 'Chef de Projet technique',
     contractType: 'CDI',
     localization: 'Aix-en-Provence',
-    publishedAt: '',
+    publishedAt: '10 Oct. 2022',
   },
   {
     id: 3,
@@ -33,7 +33,7 @@ export const jobList = [
     title: 'Ingénieur Support & Professional Services',
     contractType: 'CDI',
     localization: 'Nantes',
-    publishedAt: '',
+    publishedAt: '17 Août 2021',
   },
   {
     id: 4,
@@ -45,7 +45,7 @@ export const jobList = [
     title: 'Scrum Master',
     contractType: 'CDI',
     localization: 'Paris',
-    publishedAt: '',
+    publishedAt: '08 Jan. 2022',
   },
   {
     id: 5,
@@ -57,7 +57,7 @@ export const jobList = [
     title: 'Développeur Web',
     contractType: 'CDI',
     localization: 'Paris',
-    publishedAt: '',
+    publishedAt: '10 Jan. 2022',
   },
   {
     id: 6,
@@ -69,7 +69,7 @@ export const jobList = [
     title: 'Head of Product',
     contractType: 'CDI',
     localization: 'Paris',
-    publishedAt: '',
+    publishedAt: '18 Dec. 2021',
   },
   {
     id: 7,
@@ -81,7 +81,7 @@ export const jobList = [
     title: 'Product Mananger',
     contractType: 'CDI',
     localization: 'Paris',
-    publishedAt: '',
+    publishedAt: '02 Jan. 2022',
   },
   {
     id: 8,
@@ -93,6 +93,6 @@ export const jobList = [
     title: 'Product Builder',
     contractType: 'CDI',
     localization: 'Tourcoing',
-    publishedAt: '17/12/2021',
+    publishedAt: '15 Jan. 2022',
   },
 ];
