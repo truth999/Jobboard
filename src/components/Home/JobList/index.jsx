@@ -1,6 +1,6 @@
 import { Container, Delete } from './style';
 import { JobItem } from '../JobItem';
-import { UserContext } from '../../../hook/Context';
+import { UserContext } from '../../../hook/context/UserProvider';
 import { useContext } from 'react';
 
 export const JobList = (props) => {
