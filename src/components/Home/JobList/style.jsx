@@ -5,3 +5,9 @@ export const Container = styled.div`
   flex-direction: column;
   align-items: center;
 `;
+
+export const Delete = styled.div`
+  display: flex;
+  padding: 0 0 0 530px;
+  cursor: pointer;
+`;

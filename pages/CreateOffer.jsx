@@ -6,11 +6,12 @@ import { v4 as uuidv4 } from 'uuid';
 import { useMutation } from '@apollo/client';
 import { CREATE_JOB } from '../src/lib/graphql/mutation';
 import Link from 'next/link';
+import { format } from 'date-fns';
 
 const CreateOfferPage = () => {
   const today = new Date();
-  // TODO change date by : 17 Jan. 2022
-  const [jobInfo, setJobInfo] = useState({ id: uuidv4(), publishedAt: today.toString() });
+  const todayFormated = format(today, 'dd MMM. yyyy');
+  const [jobInfo, setJobInfo] = useState({ id: uuidv4(), publishedAt: todayFormated.toString() });
   const [createJob, { data, loading, error }] = useMutation(CREATE_JOB);
 
   const handleChange = (e) => {
@@ -66,21 +67,12 @@ const CreateOfferPage = () => {
             Ville de l'entreprise :
             <Input type="text" name="localization" onChange={(e) => handleChange(e)} />
           </Label>
-          {/* <Link href={'/'}> */}
-          <InputButton type="submit" value="Envoyer" />
-          {/* </Link> */}
+          <Link href={'/'}>
+            <InputButton type="submit" value="Envoyer" />
+          </Link>
         </FormContainer>
       </Container>
     </>
   );
 };
 export default CreateOfferPage;
-
-// id: jobInfo.id,
-// publishedAt: jobInfo.publishedAt,
-// coverImage: jobInfo.coverImage,
-// companyLogo: jobInfo.companyLogo,
-// title: jobInfo.title,
-// companyName: jobInfo.companyName,
-// contractType: jobInfo.contractType,
-// localization: jobInfo.localization,
