@@ -9,7 +9,7 @@ import Link from 'next/link';
 import { format } from 'date-fns';
 import { UserContext } from '../../hook/context/UserProvider';
 
-const CreateOffer = () => {
+const CreateOffer = ({ user }) => {
   const { isConnected } = useContext(UserContext);
   const [createJob, { data, loading, error }] = useMutation(CREATE_JOB);
 
@@ -41,7 +41,14 @@ const CreateOffer = () => {
 
   if (loading) return 'Posting, wait!';
   if (error) return `Posting error: ${error.message}`;
-  // if (!isConnected) return 'you are not connected.';
+  console.log(user);
+  if (user !== 'true')
+    return (
+      <>
+        <Header />
+        you are not connected
+      </>
+    );
 
   return (
     <>

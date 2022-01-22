@@ -6,7 +6,7 @@ import { Container, HeaderRow, Connection, Item, Logo, List } from './style';
 
 export const Header = () => {
   const { isConnected, toogleConnected } = useContext(UserContext);
-  console.log(isConnected);
+
   return (
     <UserProvider>
       <HeaderRow>
@@ -28,7 +28,7 @@ export const Header = () => {
               <Item>Trouver un job</Item>
             </Link>
             {isConnected ? (
-              <Link href="/CreateOffer">
+              <Link href={`/CreateOffer?user=${isConnected}`}>
                 <Item>Creer une offre</Item>
               </Link>
             ) : null}
