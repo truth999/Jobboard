@@ -1,6 +1,6 @@
 import React, { useContext } from 'react';
 import Link from 'next/link';
-import { UserContext } from '../../hook/Context';
+import { UserContext } from '../../hook/context/UserProvider';
 
 import { Container, HeaderRow, Connection, Item, Logo, List } from './style';
 
