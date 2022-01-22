@@ -1,16 +1,17 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import Link from 'next/link';
+import { UserContext } from '../../hook/Context';
 
 import { Container, HeaderRow, Connection, Item, Logo, List } from './style';
 
 export const Header = () => {
+  const { isConnected, toogleConnected } = useContext(UserContext);
   return (
-    // eslint-disable-next-line react/no-unescaped-entities
     <HeaderRow>
       <Container>
         <List>
           <Link href="/">
-            <Logo src="/logo.png" alt="Wlecome to the Jungle" />
+            <Logo src="/logo.png" alt="Welcome to the Jungle" />
           </Link>
           <Link href="/">
             <Item>Home</Item>
@@ -24,12 +25,16 @@ export const Header = () => {
           <Link href="/FindJobs">
             <Item>Trouver un job</Item>
           </Link>
-          <Link href="/CreateOffer">
-            <Item>Creer une offre</Item>
-          </Link>
-          <Link href="/Connection">
-            <Connection>Se connecter</Connection>
-          </Link>
+          {isConnected ? (
+            <Link href="/CreateOffer">
+              <Item>Creer une offre</Item>
+            </Link>
+          ) : null}
+          {/* <Link href="/Connection"> */}
+          <Connection onClick={toogleConnected}>
+            {isConnected ? 'Se deconnecter' : 'Se connecter'}
+          </Connection>
+          {/* </Link> */}
         </List>
       </Container>
     </HeaderRow>
